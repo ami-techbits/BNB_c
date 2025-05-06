@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BNB Learning Centre</title>
+    <link rel="icon" href="images/logo.webp" type="image/webp">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+  <style>
+   
+
+
+   .hero-bg {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-image: url('images/welcome1.jpg');
+background-size: cover;
+background-position: center;
+animation: panHero 30s ease-in-out infinite alternate;
+z-index: 0;
+}
+
+.about-image {
+border: 6px solid #0d6efd;
+box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+
+
+.about-section {
+background: linear-gradient(135deg, #cdd0e2, #0d0b8f);
+color: rgb(231, 212, 186);
+}
+
+
+.about-heading {
+font-size: 2.8rem;
+font-weight: 800;
+color: #08415c;
+animation: fadeSlideDown 1.5s ease-out;
+}
+
+.image-wrapper {
+position: relative;
+width: 650px;
+height: 650px;
+margin: auto;
+animation: floatImage 6s ease-in-out infinite;
+}
+
+.about-image {
+border: 6px solid #0d6efd;
+box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.about-text {
+background-color: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(8px);
+border-left: 5px solid rgba(255, 255, 255, 0.3);
+font-size: 1.1rem;
+color: #f0f0f0;
+animation: fadeSlideRight 1.5s ease-out;
+}
+
+.animated-fade {
+animation: fadeSlideRight 1.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeSlideRight {
+from {
+  opacity: 0;
+  transform: translateX(50px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+@keyframes fadeSlideDown {
+from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+@keyframes floatImage {
+0%, 100% { transform: translateY(0) }
+50% { transform: translateY(-10px) }
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+.about-heading {
+  font-size: 2rem;
+}
+
+.image-wrapper {
+  width: 180px;
+  height: 180px;
+}
+
+.about-text {
+  font-size: 1rem;
+  padding: 1rem;
+}
+}
+
+
+
+@keyframes rollInLeft {
+0% {
+  transform: translateX(-800px) rotate(-230deg);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0) rotate(0);
+  opacity: 1;
+}
+}
+
+.image-roll-in {
+animation: rollInLeft 1.2s ease-out;
+}
+
+
+
+   .achievement-section {
+position: relative;
+background-image: url('images/bnb2.webp');
+background-size: cover;
+background-position: center;
+padding: 5rem 1rem;
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+/* Motto Section (Shared Style) */
+.motto {
+
+position: relative;
+width: 100%;
+height: 100vh;
+background: url('images/happy13.webp') no-repeat center center fixed;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+z-index: 1;
+}
+
+
+
+
+
+
+#cta-section {
+
+background: linear-gradient(to right, rgba(212, 212, 231, 0.9), rgba(15, 32, 129, 0.85)),
+            url('images/bnb5.webp');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-warning  p-0 m-0">
+  <div class="container-fluid">
+    <!-- Logo and branding -->
+    <a class="navbar-brand d-flex align-items-center bg-success p-0 rounded logo-container" href="index.html">
+      <img src="images/logo.webp" alt="Logo" width="80" height="80"   class="me-0 logo-image" />
+      <span class="text-white logo-text">BNB Learning Centre</span>
+    </a>
+    
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <!-- Dropdowns (same as before) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">About BNB</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">About BNB</a></li>
+            <li><a class="dropdown-item" href="history.html">BNB History</a></li>
+            <li><a class="dropdown-item" href="vision.html">Our Vision& Mission</a></li>
+            <li><a class="dropdown-item" href="Values.html">Our Values</a></li>
+            <li><a class="dropdown-item" href="board.html">Board of Trustees</a></li>
+            <li><a class="dropdown-item" href="manage.html">Our Management Teams</a></li>
+          </ul>
+         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="merg.html" data-bs-toggle="dropdown">Accademia</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="merg.html">BNB Strategy</a></li>
+            <li><a class="dropdown-item" href="goals.html">Goals & Objectives</a></li>
+            <li><a class="dropdown-item" href="milestone.html">Milestones</a></li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Learning Outcomes</a>
+              <ul class="dropdown-menu">
+                <!-- 5 placeholders -->
+                <li><a class="dropdown-item" href="kg.html">KG</a></li>
+                <li><a class="dropdown-item" href="elementary.html">Elementary</a></li>
+                <li><a class="dropdown-item" href="middle.html">Middle School</a></li>
+                <li><a class="dropdown-item" href="high.html">High School</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Admissions</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="admissionwel.html">Welcome to Admissions</a></li>
+            <li><a class="dropdown-item" href="admissionreq.html">Admissions Requirements</a></li>
+            <li><a class="dropdown-item" href="online.html">Online Applications</a></li>
+         
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="community.html" data-bs-toggle="dropdown">BNB Community</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="calender.html">School Calander</a></li>
+            <li><a class="dropdown-item" href="book.html">Student Handbool</a></li>
+            <li><a class="dropdown-item" href="fee.html">School Fees</a></li>
+            <li><a class="dropdown-item" href="special.html">Special Events</a></li>
+            <li><a class="dropdown-item" href="alumni.html">Alumni Engagement</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="girl.html" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="girl.html">GAP Bright Girls Scholarship</a></li>
+            <li><a class="dropdown-item" href="needy.html">BNB Needy Students Support</a></li>
+            <li><a class="dropdown-item" href="parent.html">Parents Support to Needy Students</a></li>
+            <li><a class="dropdown-item" href="student.html">Students for Students Support</a></li>
+            <li><a class="dropdown-item" href="strategy.html">Strategy 2034</a></li>
+          </ul>
+           </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="no.html" data-bs-toggle="dropdown">News & Activities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="volenteer.html">Volunteer and Internship Opportunities</a></li>
+            <li><a class="dropdown-item" href="vacancy.html">Vacancies</a></li>
+            <li><a class="dropdown-item" href="sport.html">Sports</a></li>
+            <li><a class="dropdown-item" href="art.html">Club Activities</a></li>
+            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+          </ul>
+         </li>
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="sponser.html" data-bs-toggle="dropdown">How may I help?</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="sponser.html">Sponsor a need student</a></li>
+            <li><a class="dropdown-item" href="donate.html">Donate to the needy student fund</a></li>
+            <li><a class="dropdown-item" href="join.html">Join the Alumni group</a></li>
+          </ul>
+         </li>
+
+
+      <form class="position-relative d-flex flex-column flex-lg-row ms-lg-3 mt-2 mt-lg-0 me-2" role="search">
+        <input
+          id="navbarSearch"
+          class="form-control navbar-search"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          autocomplete="off"
+      />
+        <!-- Results dropdown -->
+        <ul id="searchResults" class="list-group position-absolute mt-2 w-100 d-none" style="z-index: 1000">
+          <!-- results will go here -->
+        </ul>
+      </form>
+      
+      
+
+      <!-- Portal Login Button -->
+<button id="portalLoginBtn" class="btn btn-primary flash-once  mt-2 mt-lg-0">
+    Portal Login
+  </button>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<section class="hero-section">
+  <div class="hero-bg"></div>
+
+  <div class="container-fluid h-100 position-relative">
+    <div class="row h-100">
+      <!-- Top Title -->
+      <div class="col-12 d-flex justify-content-center align-items-start pt-5">
+        <h1 class="hero-title text-white text-center">
+          Welcome to BNB Learning Centre
+        </h1>
+      </div>
+
+      <!-- Bottom Description -->
+      <div class="col-12 d-flex justify-content-center align-items-end">
+        <div class="hero-description glass-box text-white text-center d-none">
+          Welcome to BNB Learning Center, where every student’s journey is a vibrant adventure filled with happiness, discovery, growth, and limitless innovation.
+          Here, we spark curiosity, nurture creativity, and build a solid foundation for a future brimming with joy and endless possibilities.
+          <br><br>
+          Welcome to a place where learning is not just a journey, it’s a celebration of excitement, wonder, and boundless fun.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="about-section py-5">
+  <div class="container">
+    <h1 class="about-heading text-center mb-5">🌍 Our Story: More Than a School</h1>
+
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+        <div class="image-wrapper">
+          <img src="images/class8.webp" alt="BNB Campus" class="img-fluid rounded-circle about-image" />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="about-text shadow-lg p-4 rounded animated-fade">
+          <p>
+            BNB Learning Centre isn’t just a school — it’s a living legacy. Born from love, built on vision, and driven by innovation, BNB inspires every learner to dream boldly and lead with purpose.
+            Guided by its motto, “Empowering Holistic Excellence,” BNB is a transformative space where happiness, creativity, and community shape the future.
+            <br /><br />
+            As we build responsible global citizens, our story is your child’s next chapter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Motto Section: Our Team -->
+<section class="motto kg-motto" id="kgMotto">
+    <h2 class="motto-text">Empowering Holistic Excellence
+      Cultivating Tomorrow’s Leaders</h2>
+  </section>
+  
+
+
+
+
+<section class="achievement-section">
+  <div class="overlay"></div>
+  <div class="container">
+    <h2 class="text-center mb-5 display-5 text-white">Milestones of Impact: The BNB Legacy in Motion</h2>
+    <div class="row g-4" id="achievementGrid">
+      <!-- JavaScript will inject cards here -->
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="floating-cta d-none d-md-flex">
+  <a href="contact.html" class="cta-bubble contact">📞 Contact</a>
+  <a href="admissionwel.html" class="cta-bubble admission">🎓 Admission</a>
+  <a href="donate.html" class="cta-bubble donate">💖 Donate</a>
+</div>
+
+<!-- Mobile button -->
+<div class="floating-cta-toggle d-md-none">
+  <button id="ctaMenuBtn">☰</button>
+  <div class="cta-flyout d-none">
+    <a href="contact.html">📞 Contact</a>
+    <a href="admissionwel.html">🎓 Admission</a>
+    <a href="donate.html">💖 Donate</a>
+  </div>
+</div>
+
+
+
+<section class="loop-gallery">
+  <div class="gallery-track" id="galleryTrack">
+
+    <!-- Page 1 -->
+    <div class="gallery-page" data-index="0">
+      <div class="yellow-line"></div>
+      <div class="page-content">
+         <!-- Reserved for future content --> 
+         <div class="section-heading">
+          <h2 class="gallery-title">🎓 The Heartbeat of BNB</h2>
+          <p class="gallery-tagline">Where curiosity wears a uniform.</p>
+        </div>
+        
+        <div class="gallery-strip" data-gallery>
+          <img src="images/happy1.webp" alt="Gallery Image 1">
+          <img src="images/happy2.webp" alt="Gallery Image 2">
+          <img src="images/3.webp" alt="Gallery Image 3">
+          <img src="images/happy4.webp" alt="Gallery Image 4">
+          <img src="images/happy5.webp" alt="Gallery Image 5">
+          <img src="images/happy6.webp" alt="Gallery Image 1">
+          <img src="images/happy7.webp" alt="Gallery Image 2">
+          <img src="images/happy8.webp" alt="Gallery Image 3">
+          <img src="images/happy9.webp" alt="Gallery Image 4">
+          <img src="images/happy10.webp" alt="Gallery Image 5">
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="gallery-page" data-index="1">
+      <div class="yellow-line"></div>
+      <div class="page-content"> 
+
+        <div class="section-heading">
+          <h2 class="gallery-title">👩‍🏫 The Magic Makers	</h2>
+          <p class="gallery-tagline">Fueling minds and warming hearts.</p>
+        </div>
+        <div class="gallery-strip" data-gallery>
+          <img src="images/10.webp" alt="Gallery Image 1">
+          <img src="images/teach1.webp" alt="Gallery Image 2">
+          <img src="images/teach2.webp" alt="Gallery Image 3">
+          <img src="images/teach3.webp" alt="Gallery Image 4">
+          <img src="images/teach4.webp" alt="Gallery Image 5">
+          <img src="images/teach6.webp" alt="Gallery Image 2">
+          <img src="images/teachers.webp" alt="Gallery Image 3">
+          <img src="images/teach5.webp" alt="Gallery Image 1">
+          <img src="images/KG Teachers.webp" alt="Gallery Image 4">
+     
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="gallery-page" data-index="2">
+      <div class="yellow-line"></div>
+      <div class="page-content">
+      
+        <div class="section-heading">
+          <h2 class="gallery-title">🧑‍💼 Behind the Scenes		</h2>
+          <p class="gallery-tagline">Coordinating dreams into reality.</p>
+        </div>
+        <div class="gallery-strip" data-gallery>
+          <img src="images/Ato Saamuel Bekalo Board Secretary and Managing Director.webp" alt="Gallery Image 1">
+          <img src="images/Ato Tagesse Tamiru (elementary and Middle School Principal).webp" alt="Gallery Image 2">
+          <img src="images/Ato Taye High Shchool Principal.webp" alt="Gallery Image 3">
+          <img src="images/Senior Managment Team.webp." alt="Gallery Image 4">
+          <img src="images/Elementary Teachers.webp" alt="Gallery Image 5">
+          <img src="images/Highschool Teachers.webp" alt="Gallery Image 4">
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="gallery-page" data-index="3">
+      <div class="yellow-line"></div>
+      <div class="page-content"> 
+
+
+        <div class="section-heading">
+          <h2 class="gallery-title">🌍 Together We Rise	</h2>
+          <p class="gallery-tagline">A village built for learning, led with love.	</p>
+        </div>
+        <div class="gallery-strip" data-gallery>
+          <img src="images/Workers.webp" alt="Gallery Image 1">
+          <img src="images/PHOTO-2025-04-02-06-49-17.webp" alt="Gallery Image 2">
+          <img src="images/PHOTO-2025-04-02-06-49-19.webp" alt="Gallery Image 3">
+          <img src="images/manage.webp" alt="Gallery Image 4">
+          <img src="images/0.webp" alt="Gallery Image 5">
+          <img src="images/grad.webp" alt="Gallery Image 2">
+          <img src="images/parent1.webp" alt="Gallery Image 3">
+         
+     
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <!-- Navigation Buttons -->
+<div class="nav-btn left" onclick="goToPrevPage()" data-tooltip="← Administration">
+  ←
+  <span class="tooltip-text">See Administration</span>
+</div>
+
+<div class="nav-btn right" onclick="goToNextPage()" data-tooltip="→ Teachers">
+  →
+  <span class="tooltip-text">Meet the Teachers</span>
+</div>
+</section>
+
+
+
+<div id="galleryModal" class="gallery-modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img id="modalImage" class="modal-image" src="" alt="">
+  <button class="prev-btn" onclick="navigateImage(-1)">←</button>
+  <button class="next-btn" onclick="navigateImage(1)">→</button>
+</div>
+
+
+
+<section class="gallery-page quick-links-mobile-scroll" id="quick-links-page">
+  <div class="yellow-line"></div>
+
+  <div class="quick-links-wrapper">
+    <h1 class="animated-title">🚀 Your BNB Launchpad</h1>
+    <p class="animated-subtitle">Explore the heart of BNB through our essential links.</p>
+
+    <div class="quick-link-card-grid">
+      <!-- 15 cards -->
+      <a href="about.html" class="link-card"><img src="images/1.webp" alt=""><span>About Us</span></a>
+      <a href="history.html" class="link-card"><img src="images/bnb2.webp" alt=""><span>BNB History</span></a>
+      <a href="board.html" class="link-card"><img src="images/pana.webp" alt=""><span>Board of Trustees</span></a>
+
+      <a href="management.html" class="link-card"><img src="images/Senior Managment Team.webp" alt=""><span>Management Team</span></a>
+      <a href="admissionwel.html" class="link-card"><img src="images/0.webp" alt=""><span>Admissions</span></a>
+      <a href="gapgirls.html" class="link-card"><img src="images/3.webp" alt=""><span>GAP Bright Girls</span></a>
+      
+
+
+      <a href="sponsor.html" class="link-card"><img src="images/parent1.webp" alt=""><span>Sponsor a Student</span></a>
+      <a href="donate.html" class="link-card"><img src="images/kids6.webp" alt=""><span>Donate to Needy Fund</span></a>
+      <a href="alumni.html" class="link-card"><img src="images/grad.webp" alt=""><span>Join Alumni Group</span></a>
+     
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="gallery-page" id="cta-section">
+  <div class="yellow-line"></div>
+
+  <div class="cta-wrapper">
+    <div class="cta-glass-box">
+      <h2 class="cta-title">🚀 Your journey at BNB starts here</h2>
+      <p class="cta-subtitle">Join the movement shaping the future of education.</p>
+      <a href="admissionwel.html" class="cta-button">Start Your Journey</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bnb-footer">
+  <div class="footer-left">
+    <p>✨ Don’t let the opportunity pass you by. Join BNB today and be the change tomorrow depends on.</p>
+  </div>
+
+  <div class="footer-links">
+    <div class="link-column">
+      <a href="about.html">About</a>
+      <a href="vision.html">Vision & Mission</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="history.html">History</a>
+      <a href="management.html">Management</a>
+      <a href="board.html">Board of Trustees</a>
+    </div>
+    <div class="link-column">
+      <a href="admissionwel.html">Admissions</a>
+      <a href="community.html">BNB Community</a>
+      <a href="resources.html">Resources</a>
+      <a href="news.html">News & Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </div>
+    <div class="contact-info">
+      <p><strong>Contact Us</strong></p>
+      <p>📞 +251-9-123-456-78</p>
+      <p>✉️ info@bnb.edu.et</p>
+      <p>📍 Hawassa, Ethiopia</p>
+    </div>
+  </div>
+
+  <div class="footer-logo">
+    <img src="images/logo.webp" alt="BNB Logo" id="footerLogo">
+  </div>
+</footer>
+
+
+
+
+
+<div class="floating-socials">
+  <a href="https://facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://t.me" target="_blank" class="social-icon telegram" aria-label="Telegram">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+</div>
+
+
+<div class="footer-copyright">
+  &copy; <span id="year"></span> BNB Learning Centre. All rights reserved.
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+  // Optional: re-trigger flash animation if needed
+  const loginBtn = document.getElementById('portalLoginBtn')
+  loginBtn.classList.remove('flash-once')
+  void loginBtn.offsetWidth // trigger reflow
+  loginBtn.classList.add('flash-once')
+</script>
+
+
+
+
+<script>
+  const searchInput = document.getElementById('navbarSearch')
+  const resultsBox = document.getElementById('searchResults')
+
+  // Example static data (replace with API results later)
+  const sampleItems = [
+    'Admissions',
+    'About Us',
+    'BNB Community',
+    'Events Calendar',
+    'Learning Outcomes',
+    'Middle School Program',
+    'High School Curriculum',
+    'Newsroom',
+    'Contact Info',
+    'Resources Portal'
+  ]
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase()
+    resultsBox.innerHTML = '' // Clear old results
+
+    if (query.length === 0) {
+      resultsBox.classList.add('d-none')
+      return
+    }
+
+    // Filter results
+    const filtered = sampleItems.filter(item =>
+      item.toLowerCase().includes(query)
+    )
+
+    if (filtered.length === 0) {
+      resultsBox.classList.add('d-none')
+      return
+    }
+
+    // Populate results
+    filtered.forEach(item => {
+      const li = document.createElement('li')
+      li.className = 'list-group-item list-group-item-action'
+      li.textContent = item
+      li.style.cursor = 'pointer'
+      li.onclick = () => {
+  // Optional: set input value
+  searchInput.value = item
+  resultsBox.classList.add('d-none')
+
+  // Simple: redirect to a page (adjust mapping as needed)
+  const routes = {
+    'Admissions': 'admissionwel.html',
+    'About Us': 'about.html',
+    'BNB Community': 'community.html',
+    'Events Calendar': 'calender.html',
+    'Learning Outcomes': 'merg.html',
+    'Middle School Program': 'middle.html',
+    'High School Curriculum': 'high.html',
+    'Newsroom': 'no.html',
+    'Contact Info': 'contact.html',
+    'Resources Portal': 'girl.html'
+  }
+
+  const destination = routes[item]
+  if (destination) {
+    window.location.href = destination
+  }
+}
+
+      resultsBox.appendChild(li)
+    })
+
+    resultsBox.classList.remove('d-none')
+  })
+
+  // Hide dropdown if user clicks elsewhere
+  document.addEventListener('click', e => {
+    if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
+      resultsBox.classList.add('d-none')
+    }
+  })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  setTimeout(() => {
+    const desc = document.querySelector('.hero-description')
+    desc.classList.remove('d-none')
+    requestAnimationFrame(() => {
+      desc.classList.add('visible')
+    })
+  }, 3000)
+</script>
+
+
+
+<script>
+  const aboutText = document.querySelector('.about-text')
+  window.addEventListener('scroll', () => {
+    const pos = aboutText.getBoundingClientRect().top
+    const screenPos = window.innerHeight * 0.8
+    if (pos < screenPos) {
+      aboutText.classList.add('animated-fade')
+    }
+  })
+</script>
+
+
+
+<script>
+  const aboutImage = document.querySelector('.about-image')
+
+  let hasRolledIn = false
+
+  function rollImageIn() {
+    const rect = aboutImage.getBoundingClientRect()
+    const visible = rect.top < window.innerHeight * 0.85 && rect.bottom > 0
+
+    if (visible && !hasRolledIn) {
+      aboutImage.classList.add('image-roll-in')
+      hasRolledIn = true
+    } else if (!visible && hasRolledIn) {
+      // reset so it can animate again
+      aboutImage.classList.remove('image-roll-in')
+      hasRolledIn = false
+    }
+  }
+
+  window.addEventListener('scroll', rollImageIn)
+  window.addEventListener('load', rollImageIn)
+</script>
+
+
+
+
+
+<script>
+  const data = [
+    { title: "2,250+", subtitle: "Students Enrolled", icon: "📈", color: "#2e74b5" },
+    { title: "78% direct and 100% with Remedial", subtitle: "National Exam Pass Rate", icon: "🎓", color: "#195fa1" },
+    { title: "Top 3 Schools", subtitle: "Ranked Among the Top 3 in Hawassa", icon: "🏆", color: "#2e74b5" },
+    { title: "Digitalization", subtitle: "Digital Learning Transformation", icon: "💡", color: "#195fa1" },
+    { title: "Reading Culture", subtitle: "Strong Reading Culture Initiative", icon: "📚", color: "#2e74b5" },
+    { title: "Trained Teachers", subtitle: "Teacher Training & Leadership", icon: "👩‍🏫", color: "#195fa1" },
+    { title: "Partnerships", subtitle: "Community & Business Engagement", icon: "🤝", color: "#2e74b5" },
+    { title: "Infrastructure", subtitle: "Modern Facility Development", icon: "🏗️", color: "#195fa1" }
+  ]
+  
+  const grid = document.getElementById('achievementGrid')
+  
+  data.forEach((item, index) => {
+    const col = document.createElement('div')
+    col.className = 'col-12 col-sm-6 col-lg-3'
+    
+    const card = document.createElement('div')
+    card.className = `stat-card ${index % 2 === 0 ? 'left' : ''}`
+    card.style.borderTop = `5px solid ${item.color}`
+  
+    const title = document.createElement('h3')
+    title.dataset.target = item.title
+    title.innerText = item.title.includes('+') || item.title.includes('%') ? item.title : '0'
+  
+    const subtitle = document.createElement('p')
+    subtitle.innerText = `${item.icon} ${item.subtitle}`
+  
+    card.appendChild(title)
+    card.appendChild(subtitle)
+    col.appendChild(card)
+    grid.appendChild(col)
+  })
+  
+  // Animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const card = entry.target
+      card.classList.add('visible')
+
+      const h3 = card.querySelector('h3')
+      const rawValue = h3.dataset.target
+
+      // Animate only if the title starts with digits
+      if (/^\d/.test(rawValue.replace(/,/g, ''))) {
+        const numericPart = parseInt(rawValue.replace(/[^\d]/g, ''))
+        let current = 0
+        const inc = Math.ceil(numericPart / 50)
+        const suffix = rawValue.replace(/[0-9,]/g, '') // like "+" or "%"
+        
+        const interval = setInterval(() => {
+          current += inc
+          if (current >= numericPart) {
+            h3.innerText = rawValue
+            clearInterval(interval)
+          } else {
+            h3.innerText = current.toLocaleString() + suffix
+          }
+        }, 20)
+      } else {
+        h3.innerText = rawValue // Just show the full title for non-numeric
+      }
+    }
+  })
+}, { threshold: 0.4 })
+
+  
+  document.querySelectorAll('.stat-card').forEach(card => observer.observe(card))
+  </script>
+  
+
+
+  <script>
+    document.getElementById('ctaMenuBtn').addEventListener('click', () => {
+      document.querySelector('.cta-flyout').classList.toggle('d-none')
+    })
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const motto = document.getElementById("kgMotto")
+  
+      function revealMottoOnScroll() {
+        const rect = motto.getBoundingClientRect()
+        const windowHeight = window.innerHeight
+  
+        if (rect.top < windowHeight * 0.8) {
+          motto.classList.add("visible")
+        }
+      }
+  
+      window.addEventListener("scroll", revealMottoOnScroll)
+      revealMottoOnScroll() // Fire once in case already in view
+    })
+  </script>
+  
+
+
+
+  <script>function goToGalleryPage(index) {
+    const wrapper = document.getElementById('galleryWrapper')
+    if (!wrapper) return
+    wrapper.style.transform = `translateX(-${index * 100}vw)`
+  }
+  </script>
+  
+  <script>
+    const galleryTrack = document.getElementById('galleryTrack')
+    const totalPages = document.querySelectorAll('.gallery-page').length
+    let currentIndex = 0
+  
+    function updateGallery() {
+      galleryTrack.style.transform = `translateX(-${currentIndex * 100}vw)`
+    }
+  
+    function goToNextPage() {
+      currentIndex = (currentIndex + 1) % totalPages
+      updateGallery()
+    }
+  
+    function goToPrevPage() {
+      currentIndex = (currentIndex - 1 + totalPages) % totalPages
+      updateGallery()
+    }
+  
+    // Optional: arrow key support
+    window.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') goToNextPage()
+      if (e.key === 'ArrowLeft') goToPrevPage()
+    })
+  </script>
+  
+
+  <script>
+    const sections = ['Students', 'Teachers', 'Administration', 'Community']
+    const btnLeft = document.querySelector('.nav-btn.left')
+    const btnRight = document.querySelector('.nav-btn.right')
+  
+    function updateTooltips() {
+      const next = (currentIndex + 1) % sections.length
+      const prev = (currentIndex - 1 + sections.length) % sections.length
+      btnRight.querySelector('.tooltip-text').innerText = `→ ${sections[next]}`
+      btnLeft.querySelector('.tooltip-text').innerText = `← ${sections[prev]}`
+    }
+  
+    // Call after page switches
+    function goToNextPage() {
+      currentIndex = (currentIndex + 1) % totalPages
+      updateGallery()
+      updateTooltips()
+    }
+  
+    function goToPrevPage() {
+      currentIndex = (currentIndex - 1 + totalPages) % totalPages
+      updateGallery()
+      updateTooltips()
+    }
+  
+    // Initialize
+    updateTooltips()
+  </script>
+  
+  
+
+  <script>
+    let currentImgIndex = 0
+    let galleryImages = []
+  
+    // Setup click event on all gallery-strip images
+    document.querySelectorAll('[data-gallery]').forEach(gallery => {
+      const images = [...gallery.querySelectorAll('img')]
+      images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+          galleryImages = images
+          currentImgIndex = index
+          openModal(img.src)
+        })
+      })
+    })
+  
+    function openModal(src) {
+      document.getElementById('modalImage').src = src
+      document.getElementById('galleryModal').classList.add('active')
+    }
+  
+    function closeModal() {
+      document.getElementById('galleryModal').classList.remove('active')
+    }
+  
+    function navigateImage(direction) {
+      currentImgIndex = (currentImgIndex + direction + galleryImages.length) % galleryImages.length
+      document.getElementById('modalImage').src = galleryImages[currentImgIndex].src
+    }
+  
+    // Close on ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal()
+      if (e.key === 'ArrowRight') navigateImage(1)
+      if (e.key === 'ArrowLeft') navigateImage(-1)
+    })
+  </script>
+  
+  
+
+
+
+
+
+
+
+  <script>
+    const quickLinkGrid = document.querySelector('.quick-link-card-grid')
+
+function revealCards() {
+  if (window.innerWidth < 768) return // skip for mobile
+
+  const rect = quickLinkGrid.getBoundingClientRect()
+  const triggerPoint = window.innerHeight * 0.8
+
+  if (rect.top < triggerPoint) {
+    quickLinkGrid.classList.add('reveal')
+    window.removeEventListener('scroll', revealCards)
+  }
+}
+
+window.addEventListener('scroll', revealCards)
+window.addEventListener('load', revealCards)
+
+  </script>
+  
+
+
+
+  <script>
+    const logo = document.getElementById('footerLogo')
+    setInterval(() => {
+      logo.style.animation = 'spinLogo 1s ease-in-out'
+      setTimeout(() => logo.style.animation = '', 1000)
+    }, 5000)
+  </script>
+  
+
+
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Under Development</title>
+  <style>
+    body {
+      background: #0b132b;
+      color: #fbc531;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .typewriter {
+      font-size: 1.8rem;
+      white-space: pre-wrap;
+      border-right: 2px solid orange;
+      animation: blink-caret 0.7s step-end infinite;
+      max-width: 90%;
+    }
+
+    @keyframes blink-caret {
+      50% { border-color: transparent; }
+    }
+
+    .pop {
+      animation: popColor 0.3s ease-in-out;
+    }
+
+    @keyframes popColor {
+      0% { color: #fbc531; transform: scale(1); }
+      50% { color: #00ffcc; transform: scale(1.4); }
+      100% { color: #fbc531; transform: scale(1); }
+    }
+
+    .back-link {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #00ffcc;
+      cursor: pointer;
+      text-decoration: underline dashed;
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typewriter" id="devMessage"></div>
+
+  <div class="back-link" onclick="history.back()"><< Go back to where you were</div>
+
+  <script>
+    const message = "Oooops !!\nYou are a bit too Early\nThis page needs a Back-End\n\n💻 The System's backend is under development...\n🚧 Stay tuned. It will be awesome! 😉";
+    const container = document.getElementById("devMessage");
+    let index = 0;
+
+    function type() {
+      if (index < message.length) {
+        const char = message[index];
+        const span = document.createElement('span');
+        span.textContent = char;
+        if (char !== ' ') span.classList.add('pop');
+        container.appendChild(span);
+        index++;
+        setTimeout(type, 50 + Math.random() * 80);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
