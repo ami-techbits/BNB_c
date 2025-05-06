@@ -831,18 +831,23 @@ transform: translateX(0);
 }
 }
 
-@media (max-width: 768px) {
-    .quick-links-mobile-scroll {
-      height: auto;
-      min-height: 100vh;
-      overflow-y: auto;
-      padding-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+@media (max-width: 576px) {
+  .quick-link-card-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
   }
-  
+
+  .link-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 200px;
+  }
+}
+
 
 
 
